@@ -1,0 +1,11 @@
+name: 'require-approvals-action'
+description: 'Requires at least 1 approvals on the pull request.'
+author: 'Open Government Products, Singapore'
+inputs:
+  repo-token:
+    description: 'A GitHub token for API access. Defaults to {{ github.token }}.'
+    default: '${{ github.token }}'
+    required: false
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
